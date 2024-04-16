@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+         android:layout_height="match_parent"
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Enter Title"
+            android:padding="10dp"
+            android:id="@+id/et_title"
+            android:background="@drawable/shape"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Amount"
+            android:id="@+id/et_amount"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape"
+            android:padding="10dp"
+            android:inputType="number"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Sr.no when you need update or delete expense:"
+            android:textSize="15sp"
+            android:padding="10dp"
+            android:id="@+id/et_id"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:weightSum="3">
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:backgroundTint="#365C46"
+                app:cornerRadius="5dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="Save Exp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/button_submit"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:backgroundTint="#365C46"
+                android:gravity="center"
+                app:cornerRadius="5dp"
+                android:layout_marginLeft="20dp"
+                android:text="Update Exp"
+                android:textColor="@color/white"
+                android:id="@+id/update_button"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Delete Exp"
+                android:id="@+id/delete_button"
+                app:cornerRadius="5dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#365C46"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recyView"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>
